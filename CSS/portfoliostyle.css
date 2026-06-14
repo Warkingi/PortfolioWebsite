@@ -414,6 +414,7 @@ a {
 .projectTitleDiv {
     display: flex;
     flex-direction: column;
+    z-index: 1;
 }
 
 .projectTitle {
@@ -443,9 +444,9 @@ a {
     font-weight: 500;
     letter-spacing: 0.07em;
     text-transform: uppercase;
-    color: #ff0000;
-    background-color: rgb(57, 10, 10);
-    border: 1px solid rgba(212, 180, 131, 0.22);
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(141, 1, 1, 0.688);
+    /* border: 1px solid rgba(212, 180, 131, 0.22); */
     padding: 4px 12px;
     border-radius: 2px;
 }
