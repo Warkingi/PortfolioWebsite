@@ -545,15 +545,17 @@ a {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 } */
 
-.projectFeatureTitle {
-  border-left: 1px solid rgba(210, 130, 60, 0.5);
-  padding-left: 14px;
+.projectFeatures {
+    padding-top: 2.5em;
 }
+
 .projectFeatureTitle {
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 400;
   letter-spacing: 5px;
   text-transform: uppercase;
+  border-left: 1px solid rgba(210, 130, 60, 0.5);
+  padding-left: 14px;
   color: rgb(195, 149, 0);
   margin: 0;
 }
@@ -568,6 +570,7 @@ a {
   position: relative;
   padding: 14px 0 14px 28px;
   color: rgba(255,255,255,0.75);
+  font-size: 18px;
   letter-spacing: 2px;
   border-bottom: 0.5px solid rgba(255,255,255,0.06);
   transition: color 0.3s ease,
