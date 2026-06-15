@@ -1,43 +1,13 @@
-
-// // Init project content buttons
-// for (let i = 0; i < 100; i++) {
-//     window.console.error("Hello");
-// }
-
-// const cards = document.querySelectorAll('.projectEntry');
-//     window.console.log(cards.length);
-
-//       cards.forEach(entry => {
-//         const header = entry.querySelector('.projectEntryHeader');
-//         window.console.error("Hello");
-
-//         header.addEventListener('click', () => {
-//           const isAlreadyOpen = entry.classList.contains('is-expanded');
-
-//           // ── Accordion mode: close everything first ──────────
-//           // Delete these 4 lines if you want multiple cards
-//           // open at the same time.
-//           cards.forEach(c => {
-//             c.classList.remove('is-expanded');
-//             c.setAttribute('aria-expanded', 'false');
-//           });
-
-//           // ── Open the clicked card (if it was closed) ────────
-//           if (!isAlreadyOpen) {
-//             entry.classList.add('is-expanded');
-//             entry.setAttribute('aria-expanded', 'true');
-
-//             // Gently scroll card into view once animation begins
-//             setTimeout(() => {
-//               entry.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-//             }, 80);
-//           }
-//         });
-//       });
-
-function openProjectContent(event)
+function openProjectContent(article)
 {
+    article.classList.add('is-expanded');
+    article.setAttribute('aria-expanded', 'true');
 
+    window.console.log("Hello");
+
+    setTimeout(() => {
+    article.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 80);
 }
 
 function closeProjectContent(article)
@@ -46,9 +16,12 @@ function closeProjectContent(article)
     article.setAttribute('aria-expanded', 'false');
 
     article.querySelectorAll('iframe').forEach(iframe => {
-        iframe.contentWindow.postMessage(
-            '{"event":"command","func":"pauseVideo","args":""}', '*'
-        );
+        if (iframe.contentWindow) {
+            iframe.contentWindow.postMessage(
+                '{"event":"command","func":"pauseVideo","args":""}', '*'
+            );
+            window.console.log("CONTENT WINDOW");
+        }
     });
 
     // window.console.log("Closing Entry");

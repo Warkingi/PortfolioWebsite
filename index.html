@@ -183,7 +183,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/sD-JPJCDEOY?si=j2TgBAJeL-1TV2SC?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/sD-JPJCDEOY?si=j2TgBAJeL-1TV2SC&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
                             <div>
                                 <img src="Media/Images/Graveyard/Graveyard01.png" class="projectContentImage"/>
@@ -290,7 +290,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/rCWmBeYIacg?si=Iufvy8XjFGfD93y-?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/rCWmBeYIacg?si=Iufvy8XjFGfD93y-&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
                             <div>
                                 <img src="Media/Images/TourTheWorld/TTW01.png" class="projectContentImage"/>
@@ -340,7 +340,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/SSIrmTczRqo?si=dj89543HmByA7WuM?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/SSIrmTczRqo?si=dj89543HmByA7WuM&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
                             <div>
                                 <img src="Media/Images/Bellona Airfield/Bellona01.png" class="projectContentImage"/>
@@ -388,14 +388,7 @@
 
                     if (!isAlreadyOpen) 
                     {
-                        entry.classList.add('is-expanded');
-                        entry.setAttribute('aria-expanded', 'true');
-
-                        window.console.log("Hello");
-
-                        setTimeout(() => {
-                        entry.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                        }, 80);
+                        openProjectContent(entry)
                     }
                 });
             });
