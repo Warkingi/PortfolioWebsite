@@ -35,6 +35,25 @@
 //         });
 //       });
 
+function openProjectContent(event)
+{
+
+}
+
+function closeProjectContent(article)
+{
+    article.classList.remove('is-expanded');
+    article.setAttribute('aria-expanded', 'false');
+
+    article.querySelectorAll('iframe').forEach(iframe => {
+        iframe.contentWindow.postMessage(
+            '{"event":"command","func":"pauseVideo","args":""}', '*'
+        );
+    });
+
+    // window.console.log("Closing Entry");
+}
+
 // function onClickProjectContent(event)
 // {
 //   CurrentElement = event.currentTarget
