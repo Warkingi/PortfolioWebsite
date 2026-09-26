@@ -776,3 +776,249 @@ a {
 
     letter-spacing: 5px;
 }
+
+/* Adapt smaller screens without changing the full desktop layout. */
+@media (max-width: 1200px) {
+    body {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .background {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .introContent {
+        padding: 80px 32px;
+    }
+
+    .introContent .introContentWrapper {
+        padding: 64px 0;
+    }
+
+    .introContent .introContentWrapper #title,
+    .introContent .introContentWrapper #subtitle {
+        left: 0;
+        overflow-wrap: break-word;
+    }
+
+    .introContent .introContentWrapper #title {
+        font-size: clamp(36px, 6vw, 68px);
+        line-height: 1.2;
+        letter-spacing: 0.12em;
+    }
+
+    .introContent .introContentWrapper #subtitle {
+        margin-top: 20px;
+        font-size: clamp(16px, 2vw, 22px);
+        line-height: 1.6;
+        letter-spacing: 0.2em;
+    }
+
+    .introContent #introVideo {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .projectTitleDiv {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .projectTitle {
+        font-size: clamp(28px, 4vw, 46px);
+        line-height: 1.3;
+        overflow-wrap: anywhere;
+    }
+
+    .projectTitleDiv > div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    .projectTag {
+        max-width: 100%;
+        box-sizing: border-box;
+        line-height: 1.5;
+    }
+
+    .projectContentGrid,
+    .projectContentDetailsSection {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .projectContentDetailsSection {
+        gap: 32px;
+    }
+
+    .projectContentDetailsSection > div {
+        min-width: 0;
+    }
+
+    .projectContentDetails {
+        line-height: 1.8;
+        letter-spacing: 1px;
+        overflow-wrap: break-word;
+    }
+
+    .projectContentDetailsSection iframe {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .projectImageGallery {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .projectContentImage {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 800px) {
+    .introContent {
+        padding: 56px 24px;
+    }
+
+    .introContent .introContentWrapper {
+        padding: 56px 0;
+    }
+
+    .sectionTitle {
+        font-size: 40px;
+        letter-spacing: 3px;
+    }
+
+    .projectsContent {
+        padding-top: 32px;
+    }
+
+    .projectEntry {
+        padding: 12px;
+    }
+
+    .projectEntryHeader {
+        padding: 24px 16px;
+        touch-action: manipulation;
+    }
+
+    .projectTitle {
+        font-size: clamp(25px, 6vw, 36px);
+        letter-spacing: 0.1em;
+    }
+
+    .projectTag {
+        font-size: 12px;
+        padding: 4px 8px;
+        letter-spacing: 0.05em;
+    }
+
+    .projectEntryYear {
+        font-size: 18px;
+        padding: 12px 0 0;
+    }
+
+    .projectContentDetailsSection {
+        padding: 24px 8px 32px;
+        gap: 24px;
+    }
+
+    .projectContentDetails {
+        font-size: 18px;
+    }
+
+    .projectContentDetails:first-child {
+        margin-top: 0;
+    }
+
+    .projectFeatures {
+        padding-top: 24px;
+    }
+
+    .projectFeatureTitle {
+        font-size: 26px;
+        letter-spacing: 3px;
+    }
+
+    .projectFeatureList li {
+        font-size: 16px;
+        line-height: 1.6;
+        letter-spacing: 1px;
+    }
+
+    .contactContent {
+        padding: 20px;
+    }
+
+    .contactContent p {
+        font-size: 14px;
+        line-height: 1.8;
+        letter-spacing: 2px;
+    }
+
+    .contactFooter {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .contactFooter a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 48px;
+        min-height: 48px;
+    }
+
+    .contactFooter img {
+        display: block;
+        width: 36px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .projectImageGallery {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+/* Touchscreens should not retain desktop hover effects after a tap. */
+@media (hover: none) {
+    .projectEntryHeader:hover .projectTitle {
+        letter-spacing: 0.15em;
+    }
+
+    .projectEntryHeader:hover .projectEntryHeaderImage {
+        filter: none;
+        object-position: center 20%;
+        transition: none;
+    }
+
+    .projectFeatureList li:hover {
+        color: rgba(255, 255, 255, 0.75);
+        padding-left: 28px;
+    }
+
+    .projectFeatureList li:hover::before {
+        width: 8px;
+    }
+}
+
+@media (hover: none) and (max-width: 800px) {
+    .projectEntryHeader:hover .projectTitle {
+        letter-spacing: 0.1em;
+    }
+}
