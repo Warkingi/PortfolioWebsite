@@ -1,9 +1,13 @@
 function openProjectContent(article)
 {
+    // Collapsed projects do not download galleries or start YouTube players.
+    article.querySelectorAll('img[data-src], iframe[data-src]').forEach(media => {
+        media.src = media.dataset.src;
+        media.removeAttribute('data-src');
+    });
+
     article.classList.add('is-expanded');
     article.setAttribute('aria-expanded', 'true');
-
-    window.console.log("Hello");
 
     setTimeout(() => {
     article.scrollIntoView({ behavior: 'smooth', block: 'nearest' });

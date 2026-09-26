@@ -11,11 +11,9 @@
 </head>
 
 <body>
-    <!-- External API -->
-    <script src="https://www.youtube.com/iframe_api" defer></script>
-
     <!-- Custom Scripts -->
     <script src="JavaScript/projectDropdown.js"></script>
+    <script src="JavaScript/aboutReveal.js" defer></script>
     
 
     <div class="background">
@@ -45,33 +43,70 @@
                 <h1 id="title">Noah Cracknell</h1>
                 <h1 id="subtitle">Passion for all things Gaming</h1>
             </div>
-            <video autoplay muted loop id="introVideo">
+            <video autoplay muted loop playsinline id="introVideo"
+                   disablepictureinpicture disableremoteplayback
+                   controlslist="nodownload nofullscreen noremoteplayback noplaybackrate"
+                   tabindex="-1" aria-hidden="true">
                 <source src="Media/Videos/Wark Sizzle Compressed.mp4" type="video/mp4">
             </video>
             <!-- <img src="Media/Images/portrait.png" id="portrait"> -->
         </div>
-        <div class="biographyContent">
-            <h1 class="sectionTitle">About Me</h1>
+        <section class="biographyContent" id="about" aria-labelledby="about-title">
+            <h2 class="sectionTitle" id="about-title">About Me</h2>
             <div id="content-wrapper">
-                <p>
-                    It has always been a passion of mine to create engaging worlds through game design
-                    and storytelling that leave a lasting impression on the people who experience them. 
-                    From a young age, I found myself building games for friends and family to enjoy while 
-                    driven by the excitement of watching them play.
-                </p>
-                <p>
-                    I’ve always believed designing the best games starts with understanding the player.
-                    By playing alongside the people who bring these experiences to life,
-                    I can better understand what makes a game become a lasting memory rather than something easily forgotten. 
-                </p>
+                <div class="aboutIntroduction">
+                    <p>
+                        It has always been a passion of mine to create engaging worlds through game design
+                        and storytelling that leave a lasting impression on the people who experience them.
+                        From a young age, I found myself building games for friends and family to enjoy while
+                        driven by the excitement of watching them play.
+                    </p>
+                    <p>
+                        I’ve always believed designing the best games starts with understanding the player.
+                        By playing alongside the people who bring these experiences to life,
+                        I can better understand what makes a game become a lasting memory rather than something easily forgotten.
+                    </p>
+                </div>
+                <div class="aboutStories">
+                    <div class="aboutRow">
+                        <figure class="aboutImage">
+                            <img src="Media/Images/Warcraft3Editor.webp" alt="A custom city map open in the Warcraft III World Editor" width="1280" height="693" loading="lazy" decoding="async">
+                            <figcaption>Warcraft III Editor · A map I developed back during 2012-2014.</figcaption>
+                        </figure>
+                        <div class="aboutText">
+                            <h3>How I got started</h3>
+                            <p>
+                                I started making my own games at a young age, from creating tabletop games
+                                to inventing new modes in Call of Duty custom games. I also used the Warcraft III
+                                editor, Project Spark and Minecraft Adventure mode to explore my ideas.
+                                I loved finding ways to turn the tools available to me into something others could play.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="aboutRow">
+                        <figure class="aboutImage">
+                            <img src="Media/Images/WoWBlackrockTogether.webp" alt="A group of World of Warcraft characters sitting together in Blackrock Depths" width="1280" height="720" loading="lazy" decoding="async">
+                            <figcaption>World of Warcraft · Hanging out in Blackrock Depths.</figcaption>
+                        </figure>
+                        <div class="aboutText">
+                            <h3>Better with friends</h3>
+                            <p>
+                                Multiplayer games have always been a large part of my love for gaming. I believe
+                                games are better with friends, and I want to create experiences that people can
+                                enjoy together and keep coming back to. Watching others enjoy something I’ve made
+                                brings me even more joy than playing it myself.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
         <div class="projectsContent">
             <h1 class="sectionTitle">Projects</h1>
             <!-- ══════════════ EMPIRES RED VS BLUE ══════════════ -->
             <article class="projectEntry" aria-expanded="false">
                 <div class="projectEntryHeader">
-                    <img class="projectEntryHeaderImage" src="Media/Images/Empires/EmpiresBackground.png", loading="eager">
+                    <img class="projectEntryHeaderImage" src="Media/Images/Empires/EmpiresBackground.webp" width="1280" height="720" loading="lazy" decoding="async">
                     <div class="projectTitleDiv">
                         <h2 class="projectTitle">Empires: Red vs Blue</h2>
                         <div>
@@ -118,16 +153,16 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/C8EANWtNiQw?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe width="560" height="315" data-src="https://www.youtube.com/embed/C8EANWtNiQw?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
                             <div>
-                                <img src="Media/Images/Empires/Empires01.png" class="projectContentImage"/>
-                                <img src="Media/Images/Empires/Empires02.png" class="projectContentImage"/>
-                                <img src="Media/Images/Empires/Empires03.png" class="projectContentImage"/>
-                                <img src="Media/Images/Empires/Empires04.png" class="projectContentImage"/>
-                                <img src="Media/Images/Empires/Empires05.png" class="projectContentImage"/>
-                                <img src="Media/Images/Empires/Empires06.png" class="projectContentImage"/>
-                                <img src="Media/Images/Empires/Empires07.png" class="projectContentImage"/>
+                                <img data-src="Media/Images/Empires/Empires01.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/Empires/Empires02.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/Empires/Empires03.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/Empires/Empires04.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/Empires/Empires05.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/Empires/Empires06.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/Empires/Empires07.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
                             </div>
                         </div>
                     </div>
@@ -136,7 +171,7 @@
             <!-- ══════════════ GRAVEYARD RPG ══════════════ -->
             <article class="projectEntry" aria-expanded="false">
                 <div class="projectEntryHeader">
-                    <img class="projectEntryHeaderImage" src="Media/Images/Graveyard/GraveyardBackground.png", loading="eager">
+                    <img class="projectEntryHeaderImage" src="Media/Images/Graveyard/GraveyardBackground.webp" width="1280" height="720" loading="lazy" decoding="async">
                     <div class="projectTitleDiv">
                         <h2 class="projectTitle">Graveyard RPG</h2>
                         <div>
@@ -183,15 +218,15 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/sD-JPJCDEOY?si=j2TgBAJeL-1TV2SC&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe width="560" height="315" data-src="https://www.youtube.com/embed/sD-JPJCDEOY?si=j2TgBAJeL-1TV2SC&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
                             <div>
-                                <img src="Media/Images/Graveyard/Graveyard01.png" class="projectContentImage"/>
-                                <img src="Media/Images/Graveyard/Graveyard02.png" class="projectContentImage"/>
-                                <img src="Media/Images/Graveyard/Graveyard03.png" class="projectContentImage"/>
-                                <img src="Media/Images/Graveyard/Graveyard04.png" class="projectContentImage"/>
-                                <img src="Media/Images/Graveyard/Graveyard05.png" class="projectContentImage"/>
-                                <img src="Media/Images/Graveyard/Graveyard06.png" class="projectContentImage"/>
+                                <img data-src="Media/Images/Graveyard/Graveyard01.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/Graveyard/Graveyard02.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/Graveyard/Graveyard03.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/Graveyard/Graveyard04.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/Graveyard/Graveyard05.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/Graveyard/Graveyard06.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
                             </div>
                         </div>
                     </div>
@@ -200,7 +235,7 @@
             <!-- ══════════════ WORLD OF HEROES ══════════════ -->
             <article class="projectEntry" aria-expanded="false">
                 <div class="projectEntryHeader">
-                    <img class="projectEntryHeaderImage" src="Media/Images/WorldOfHeroes/WorldOfHeroesDiscord.png", loading="eager">
+                    <img class="projectEntryHeaderImage" src="Media/Images/WorldOfHeroes/WorldOfHeroesDiscord.webp" width="1280" height="678" loading="lazy" decoding="async">
                     <div class="projectTitleDiv">
                         <h2 class="projectTitle">World of Heroes</h2>
                         <div>
@@ -245,13 +280,13 @@
                                 <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/C8EANWtNiQw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
                             </div>
                             <div>
-                                <img src="Media/Images/WorldOfHeroes/WoH01.png" class="projectContentImage"/>
-                                <img src="Media/Images/WorldOfHeroes/WoH02.png" class="projectContentImage"/>
-                                <img src="Media/Images/WorldOfHeroes/WoH03.png" class="projectContentImage"/>
-                                <img src="Media/Images/WorldOfHeroes/WoH04.png" class="projectContentImage"/>
-                                <img src="Media/Images/WorldOfHeroes/WoH05.png" class="projectContentImage"/>
-                                <img src="Media/Images/WorldOfHeroes/WoH06.png" class="projectContentImage"/>
-                                <img src="Media/Images/WorldOfHeroes/WoH07.png" class="projectContentImage"/>
+                                <img data-src="Media/Images/WorldOfHeroes/WoH01.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/WorldOfHeroes/WoH02.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/WorldOfHeroes/WoH03.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/WorldOfHeroes/WoH04.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/WorldOfHeroes/WoH05.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/WorldOfHeroes/WoH06.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/WorldOfHeroes/WoH07.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
                             </div>
                         </div>
                     </div>
@@ -260,7 +295,7 @@
             <!-- ══════════════ GUNFIGHT TOUR THE WORLD ══════════════ -->
             <article class="projectEntry" aria-expanded="false">
                 <div class="projectEntryHeader">
-                    <img class="projectEntryHeaderImage" src="Media/Images/TourTheWorld/Gunfight_BG.png", loading="eager">
+                    <img class="projectEntryHeaderImage" src="Media/Images/TourTheWorld/Gunfight_BG.webp" width="1280" height="720" loading="lazy" decoding="async">
                     <div class="projectTitleDiv">
                         <h2 class="projectTitle">Gunfight: Tour the World</h2>
                         <div>
@@ -291,15 +326,15 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/rCWmBeYIacg?si=Iufvy8XjFGfD93y-&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe width="560" height="315" data-src="https://www.youtube.com/embed/rCWmBeYIacg?si=Iufvy8XjFGfD93y-&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
                             <div>
-                                <img src="Media/Images/TourTheWorld/TTW01.png" class="projectContentImage"/>
-                                <img src="Media/Images/TourTheWorld/TTW02.png" class="projectContentImage"/>
-                                <img src="Media/Images/TourTheWorld/TTW03.png" class="projectContentImage"/>
-                                <img src="Media/Images/TourTheWorld/TTW04.png" class="projectContentImage"/>
-                                <img src="Media/Images/TourTheWorld/TTW05.png" class="projectContentImage"/>
-                                <img src="Media/Images/TourTheWorld/TTW06.png" class="projectContentImage"/>
+                                <img data-src="Media/Images/TourTheWorld/TTW01.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/TourTheWorld/TTW02.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/TourTheWorld/TTW03.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/TourTheWorld/TTW04.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/TourTheWorld/TTW05.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/TourTheWorld/TTW06.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
                                 <!-- <img src="Media/Images/Bellona Airfield/BellonaDev01.png" class="projectContentImage"/>
                                 <img src="Media/Images/Bellona Airfield/BellonaDev02.png" class="projectContentImage"/> -->
                             </div>
@@ -310,7 +345,7 @@
             <!-- ══════════════ BELLONA AIRFIELD ══════════════ -->
             <article class="projectEntry" aria-expanded="false">
                 <div class="projectEntryHeader">
-                    <img class="projectEntryHeaderImage" src="Media/Images/Bellona Airfield/InfectionThumbNoTEXT.png", loading="eager">
+                    <img class="projectEntryHeaderImage" src="Media/Images/Bellona Airfield/InfectionThumbNoTEXT.webp" width="1280" height="720" loading="lazy" decoding="async">
                     <div class="projectTitleDiv">
                         <h2 class="projectTitle">Bellona Airfield</h2>
                         <div>
@@ -341,14 +376,14 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/SSIrmTczRqo?si=dj89543HmByA7WuM&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe width="560" height="315" data-src="https://www.youtube.com/embed/SSIrmTczRqo?si=dj89543HmByA7WuM&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
                             <div>
-                                <img src="Media/Images/Bellona Airfield/Bellona01.png" class="projectContentImage"/>
-                                <img src="Media/Images/Bellona Airfield/Bellona02.png" class="projectContentImage"/>
-                                <img src="Media/Images/Bellona Airfield/Bellona03.png" class="projectContentImage"/>
-                                <img src="Media/Images/Bellona Airfield/Bellona04.png" class="projectContentImage"/>
-                                <img src="Media/Images/Bellona Airfield/Bellona05.png" class="projectContentImage"/>
+                                <img data-src="Media/Images/Bellona Airfield/Bellona01.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/Bellona Airfield/Bellona02.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/Bellona Airfield/Bellona03.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/Bellona Airfield/Bellona04.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
+                                <img data-src="Media/Images/Bellona Airfield/Bellona05.webp" class="projectContentImage" width="1280" height="720" loading="lazy" decoding="async">
                                 <!-- <img src="Media/Images/Bellona Airfield/BellonaDev01.png" class="projectContentImage"/>
                                 <img src="Media/Images/Bellona Airfield/BellonaDev02.png" class="projectContentImage"/> -->
                             </div>
@@ -361,10 +396,10 @@
             <!-- <h1 class="sectionTitle">Contact Information</h1> -->
             <p class="signatureFooter">Designed and Developed by Noah Cracknell.</p>
             <div class="contactFooter">
-                <a href="https://www.fortnite.com/@warkcreative"><img src="Media/Images/fortnite_logo.png", loading="eager"></a>
-                <a href="https://www.youtube.com/@wark5133"><img src="Media/Images/youtube_logo.png", loading="eager"></a>
-                <a href="https://www.linkedin.com/in/noah-cracknell-0220b914a"><img src="Media/Images/linkedin_logo.png", loading="eager"></a>
-                <a href="https://github.com/Warkingi"><img src="Media/Images/github_logo.png", loading="eager"></a>
+                <a href="https://www.fortnite.com/@warkcreative"><img src="Media/Images/fortnite_logo.webp" width="120" height="120" loading="lazy" decoding="async"></a>
+                <a href="https://www.youtube.com/@wark5133"><img src="Media/Images/youtube_logo.webp" width="120" height="85" loading="lazy" decoding="async"></a>
+                <a href="https://www.linkedin.com/in/noah-cracknell-0220b914a"><img src="Media/Images/linkedin_logo.webp" width="120" height="120" loading="lazy" decoding="async"></a>
+                <a href="https://github.com/Warkingi"><img src="Media/Images/github_logo.webp" width="120" height="107" loading="lazy" decoding="async"></a>
             </div>
         </div>
     </div>
